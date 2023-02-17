@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "5dbb9bd0-3300-4761-80cb-a527fa45f691",
+		"name": "l2_saas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Home",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weather-ternopil",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"{{ACCESS_TOKEN}}\",\n    \"start_date\": \"2023-01-16\",\n    \"end_date\": \"2023-01-17\",\n    \"location\": \"Ukraine:Ternopil\",\n    \"requester_name\": \"mike\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/{{WEATHER_ENDPOINT}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"{{WEATHER_ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weather-kyiv",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"{{ACCESS_TOKEN}}\",\n    \"start_date\": \"2022-03-12\",\n    \"end_date\": \"2022-04-12\",\n    \"location\": \"Ukraine:Kyiv\",\n    \"requester_name\": \"mike\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/{{WEATHER_ENDPOINT}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"{{WEATHER_ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "weather-new-york",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"{{ACCESS_TOKEN}}\",\n    \"start_date\": \"2023-01-15\",\n    \"end_date\": \"2023-01-16\",\n    \"location\": \"United States:New York\",\n    \"requester_name\": \"JaSON\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/{{WEATHER_ENDPOINT}}",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"{{WEATHER_ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://54.210.172.245:8000/",
+			"type": "default"
+		},
+		{
+			"key": "ACCESS_TOKEN",
+			"value": "iamsecure",
+			"type": "default"
+		},
+		{
+			"key": "WEATHER_ENDPOINT",
+			"value": "/content/api/v1/integration/weather",
+			"type": "default"
+		}
+	]
+}
